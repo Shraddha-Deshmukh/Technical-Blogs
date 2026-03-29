@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--  html file cha magic number, he document html ch ahe he js cha engine la sangne  - apache, tomcat, netscape, IIS, chakra, websphere all are engines -->
+
+<html lang="en"> 
+    <!-- head -->
+    <head>
+        <meta charset="utf-8" /> <!-- unicode transforming format - developed by Ken thompson-->
+        <title>Native WebGL Ribbon Studio</title>
+        <style>
+            body {
+                margin: 0;
+                background: #000;
+                overflow: hidden;
+                font-family: sans-serif;
+            }
+
+            canvas {
+                width: 100vw;
+                height: 100vh;
+                display: block;
+            }
+
+            #overlay {
+                text-align: center;
+                margin: 1rem 0;
+                bottom: 20px;
+                left: 20px;
+                color: white;
+                pointer-events: none;
+                text-shadow: 1px 1px 2px black;
+                z-index: 10;
+            }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js"></script>
+    </head>
+
+    <!-- body -->
+    <body onload="main()"> <!-- body cha on load event la call krne -->
+        <h2 id="overlay">
+            <strong>Native WebGL Ribbon Studio | Particle Engine</strong><br>
+            - Shraddha Deshmukh
+        </h2>
+
+        <canvas id="SGD_canvas" width="800" height="600">   <!-- apple ne WebKit tayar krtna canvas element dila-->
+            This browser does not support canvas element.
+        </canvas>
+
+    <!-- script -->
+    <script src="Canvas.js"></script>
+    <script src="gl-matrix-min.js"></script>    <!-- this file is similer to vmath.h -->
+
+    </body>
+</html>
